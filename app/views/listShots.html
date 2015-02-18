@@ -1,8 +1,8 @@
 <!-- Template code for displaying a list of shots -->
 
-<div>
+<div class="row">
   <ul class="thumbnails" >
-    <li class="span3 shot" ng-repeat="shot in list.shots">
+    <li class="col-xs-6 col-sm-4 shot" ng-repeat="shot in list.shots">
     <div class="thumbnail">
       <a href="#/shots/{{shot.id}}">
         <img ng-src="{{shot.image_url}}">
