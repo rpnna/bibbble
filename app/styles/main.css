@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:300,400,600);
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -6,6 +8,7 @@
 }
 
 body {
+  font-family: 'Dosis', sans-serif;
   padding: 0;
 }
 
@@ -60,9 +63,35 @@ body {
 }
 
 /* Custom styles */
+
+.bible {
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #74CB80;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.shotCard {
+  padding: 0;
+}
+
+.playerArt {
+  width: 64px;
+  height: 64px !important;
+  max-width: none !important;
+  border-radius: 32px;
+  border-top-right-radius: 4px;
+  box-shadow: rgb(230, 230, 230) 1px 1px, rgb(230, 230, 230) 2px 2px, rgb(230, 230, 230) 3px 3px, rgb(230, 230, 230) 4px 4px, rgb(234, 234, 234) 5px 5px, rgb(238, 238, 238) 6px 6px, rgb(242, 242, 242) 7px 7px, rgb(246, 246, 246) 8px 8px, rgb(250, 250, 250) 9px 9px, rgb(255, 255, 255) 10px 10px; /* Long Shadow effect */
+}
+
+.media-left, .media-body {
+  padding: 10px;
 }
 
 
