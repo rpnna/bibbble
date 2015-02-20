@@ -2,13 +2,14 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Bibbble</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -36,12 +37,12 @@
             <span class="glyphicon glyphicon-book pull-left bible"></span><a class="navbar-brand brandText" href="#/">bibbble</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="MainCtrl">
 
             <ul class="nav navbar-nav navSections">
-              <li class="activeSection"><a class="navSection" ng-href="#/popular">Popular</a></li>
-              <li><a class="navSection" ng-href="#/everyone">Everyone</a></li>
-              <li><a class="navSection" ng-href="#/debuts">Debuts</a></li>
+              <li ng-class="{ activeSection: isActive('/popular')}"><a class="navSection" ng-href="#/popular">Popular</a></li>
+              <li ng-class="{ activeSection: isActive('/everyone')}"><a class="navSection" ng-href="#/everyone">Everyone</a></li>
+              <li ng-class="{ activeSection: isActive('/debuts')}"><a class="navSection" ng-href="#/debuts">Debuts</a></li>
 <!--
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/contact">Contact</a></li>
@@ -97,6 +98,7 @@
         <script src="scripts/controllers/list.js"></script>
         <script src="scripts/controllers/shot.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/controllers/header.js"></script>
         <!-- endbuild -->
 </body>
 </html>
