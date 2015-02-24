@@ -8,12 +8,12 @@
  * Controller of the bibbbleApp
  */
 angular.module('bibbbleApp')
-  .controller('ListCtrl', function ($scope, $routeParams, $http) {
+  .controller('ListCtrl', function ($scope, $routeParams, bibbbleServ) {
     // typeOfShot may have the following values: popular, everyone, debuts
     var typeOfShot = $routeParams.list;
     console.log("The List of shots to display:", typeOfShot);
   
-    $http.jsonp('http://api.dribbble.com/shots/'+ typeOfShot +'?callback=JSON_CALLBACK').then(function (data) {
+    bibbbleServ.list(typeOfShot).then(function (data) {
       console.log(data);  
       $scope.list = data.data;
     });

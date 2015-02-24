@@ -8,11 +8,14 @@
  * Controller of the bibbbleApp
  */
 angular.module('bibbbleApp')
-  .controller('ShotCtrl', function ($scope, $http) {
+  .controller('ShotCtrl', function ($scope, $routeParams, bibbbleServ) {
+    
+    var shot_id = $routeParams.id;
+    console.log("Shot's id to display:", shot_id);
   
-    $http.jsonp('http://api.dribbble.com/shots/popular?callback=JSON_CALLBACK').then(function (data) {
+    bibbbleServ.shot(shot_id).then(function (data) {
       console.log(data);  
-      $scope.list = data.data;
+      $scope.shot = data.data;
     });
    
   });
